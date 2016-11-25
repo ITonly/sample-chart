@@ -1,0 +1,15 @@
+<RadSideDrawer [transition]="sideDrawerTransition">
+    <!-- << angular-sidedrawer-transitions -->
+    <StackLayout tkDrawerContent class="sideStackLayout">
+        <gpm-drawer-content>
+        </gpm-drawer-content>
+    </StackLayout>
+    <StackLayout tkMainContent>
+        <gpm-action-bar [actionTitle]="actionTitle" (onNavTap)="onNavigationTap($event)"
+          allowTitleClick="true" useCustomTap="true" (onTitleTap)="onTitleTap($event)"></gpm-action-bar>
+        <StackLayout gpm-dashboard-summary [summary]="summary" [total]="totalAmount">
+        </StackLayout>
+        <StackLayout gpm-dashboard-navigation>
+        </StackLayout>
+    </StackLayout>
+</RadSideDrawer>

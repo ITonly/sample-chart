@@ -1,0 +1,25 @@
+<GridLayout class="container" columns="*,*" rows="*,*">
+    <StackLayout class="stackLayout" orientation="vertical" row="0" col="0" colSpan="2">
+        <Label class="fa icon" text="{{ eyeIcon | fonticon}}" (tap)="changeAmountStatus()"></Label>
+        <Label class="middlelable" *ngIf="!isShow" text="{{ '--'}}"></Label>
+        <Label class="middlelable" *ngIf="isShow" text="{{ totalAmount | number:'.2-2'}}"></Label>
+        
+        <Label class="label" [text]="month + '月盈亏'"></Label>
+    </StackLayout>
+
+    <StackLayout class="stackLayout" orientation="vertical"  row="1" col="0">
+        <Label class="ion icon1" [text]="'ion-arrow-graph-up-right' | fonticon"></Label>
+        <Label class="label" *ngIf="!isShow" text="{{ '--'}}" ></Label>
+        <Label class="label" *ngIf="isShow" text="{{summaryModel.income.name | number:'.2-2'}}"></Label>
+        
+        <Label class="label" [text]="month+ '月收入'"></Label>
+    </StackLayout>
+
+    <StackLayout class="stackLayout" orientation="vertical"  row="1" col="1">
+        <Label class="ion icon1" [text]="'ion-arrow-graph-down-right' | fonticon"></Label>
+        <Label class="label" *ngIf="!isShow" text="{{ '--'}}" ></Label>
+        <Label class="label" *ngIf="isShow" text="{{summaryModel.outcome.name| number:'.2-2'}}"></Label>
+        
+        <Label class="label" [text]="month + '月支出'"></Label>
+    </StackLayout>
+</GridLayout>

@@ -1,0 +1,38 @@
+// Colors
+$black: #000 !default;
+$white: #fff !default;
+$base: $white !default;
+$grey: #e0e0e0 !default;
+$grey-background: #bababa !default;
+$red: #d50000 !default;
+$charcoal: #303030 !default;
+$primary: #1CCFC9 !default;//rgba(0,0,0,.87);
+$secondary: lighten($black, 46%) !default;
+$disabled: lighten($black, 62%) !default;
+$accent: #30bcff !default;
+$error: #d50000 !default;
+
+// Skin
+$background: $base !default;
+$text-color: lighten($black, 13%) !default;
+$text-color-light: lighten($black, 46%) !default;
+
+// Buttons
+$btn-color: $primary !default;
+$btn-color-secondary: #01a0ec !default;
+$btn-color-outline-highlighted: #c0ebff !default;
+$btn-color-disabled: #a4a4a4 !default;
+$btn-font-size: 18 !default;
+$btn-radius: 0 !default;
+$btn-padding-x: 10 !default;
+$btn-padding-y: 10 !default;
+$btn-margin-x:	16 !default;
+$btn-margin-y:	0 !default;
+
+$alert-danger-bg:             #f2dede !default;
+$alert-danger-text:           #a94442 !default;
+$alert-danger-border:         darken($alert-danger-bg, 5%) !default;
+
+$alert-success-bg:            #dff0d8 !default;
+$alert-success-text:          #3c763d !default;
+$alert-success-border:        darken($alert-success-bg, 5%) !default;

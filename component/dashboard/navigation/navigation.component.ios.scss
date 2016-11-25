@@ -1,0 +1,67 @@
+@import 'styles/_guanplus.theme.scss';
+
+.item {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    border-width: 1;
+    border-color: #F6F6F6;
+}
+
+.labelName{
+  // margin-top: 20;
+  margin-top: 5;
+  margin-bottom: 20;
+  font-size: 14;
+}
+
+.img {
+    margin-top: 30;
+    height: 25;
+    width: 25;
+}
+
+.fab-top {
+    font-size:14;
+    color:white;
+    margin-bottom: 180;
+    horizontal-align: right;
+    vertical-align: bottom;
+    border-radius: 30;
+    background-color: #DE649D;
+    /*background-size: 60 60;*/
+}
+
+.fab-middle-first {
+    font-size:14;
+    color:white;
+    margin-bottom: 95;
+    horizontal-align: right;
+    vertical-align: bottom;
+    border-radius: 30;
+    background-color: #E39B64;
+}
+
+.fab-middle-second {
+    margin-bottom: 10;
+    font-size:14;
+    color:white;
+    horizontal-align: right;
+    vertical-align: bottom;
+    border-radius: 30;
+    background-color: #41B6FB;
+
+}
+.fab-default {
+    color: $primary;
+    font-size: 60;
+    horizontal-align: right;
+    border-radius: 30;
+}
+.fab-primary {
+    color: #748180;
+    font-size: 60;
+    horizontal-align: right;
+    border-radius: 30;
+}

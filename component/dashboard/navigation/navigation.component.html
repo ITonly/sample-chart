@@ -1,0 +1,18 @@
+<GridLayout rows="*,15,60" id="grid">
+    <RadListView [items]="items" (itemTap)="onItemClick($event)" row="0">
+        <template tkListItemTemplate let-item="item">
+            <StackLayout class="item form" orientation="vertical" [nsRouterLink]="[item.path]" pageTransition="slideLeft">
+                <!--<Label class="fa" [text]="item.icon | fonticon"></Label>-->
+                <Image class="img" [src]="item.icon"></Image>
+                <TextField class="labelName input" isEnabled="false" [(ngModel)]="item.name"></TextField>
+            </StackLayout>
+        </template>
+        <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" spanCount="3" itemHeight="102"></ListViewGridLayout>
+    </RadListView>
+    <Label row="0" class="fab fab-top text-center" text="收入" (tap)="routeLink('Income')" style.visibility="{{addFabVisiblity}}"></Label>
+    <Label row="0" class="fab fab-middle-first text-center" text="支出" (tap)="routeLink('Outcome')" style.visibility="{{addFabVisiblity}}"></Label>
+    <Label row="0" text="互转" class="fab fab-middle-second text-center" (tap)="routeLink('transfer')" style.visibility="{{addFabVisiblity}}"></Label>
+    <StackLayout row="1">
+    </StackLayout>
+    <Label row="2" text="{{ ionIcon | fonticon}}" class="{{ionColor}}" (tap)="fabDefaultTap()"></Label>
+</GridLayout>

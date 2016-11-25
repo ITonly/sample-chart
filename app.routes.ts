@@ -14,24 +14,7 @@ import { ExpenseReportComponent } from './component/report/expense-report/expens
 import { DailyReportComponent } from './component/report/daily-report/daily-report.component';
 import { AnnualReportComponent } from './component/report/annual-report/annual-report.component';
 // import { StatementComponent } from './component/statement/statement.component';
-import { TransactionComponent } from './component/transaction/transaction.component';
-import { TransactionDetailComponent } from './component/transaction/detail/transaction-detail.component';
-import { TransferComponent } from './component/transaction/transaction-transfer.component';
 
-import { DepartmentComponent } from './component/settings/department/department.component';
-import { ContactDetailsComponent } from './component/settings/contact/contact-details.component';
-import { ContactComponent } from './component/settings/contact/contact.component';
-import { CategoryComponent } from './component/settings/category/category.component';
-import { DepartmentDetailsComponent } from './component/settings/department/department-details.component';
-import { AccountComponent } from './component/settings/account/account.component';
-import { AccountDetailComponent } from './component/settings/account/account-detail.component';
-import { AddressComponent } from './component/settings/address-list/address.component';
-import { PersonalInfoComponent } from './component/settings/personal-info/personal-info.component';
-import { CompanyInfoComponent } from './component/settings/company-info/company-info.component';
-import { CompanyListComponent } from './component/settings/company-list/company-list';
-import { AboutComponent } from './component/settings/about/about.component';
-import { ContactUsComponent } from './component/settings/contact-us/contact-us.component';
-import { PdfviewPageComponent } from './component/shared/pdfview-page/pdfview-page.component';
 
 export const routes: Routes = [
     { path: '', component: LandingComponent },
@@ -40,13 +23,7 @@ export const routes: Routes = [
         component: DashboardComponent,
         canActivate: [AuthorizationService]
     },
-    { path: 'category/:type', component: CategoryComponent },
-    { path: 'contactList/:type', component: ContactComponent },
-    { path: 'contact/:id', component: ContactDetailsComponent },
-    { path: 'departmentList/:type', component: DepartmentComponent },
-    { path: 'department/:id', component: DepartmentDetailsComponent },
-    { path: 'account', component: AccountComponent },
-    { path: 'account/:id', component: AccountDetailComponent },
+    
     {
         path: 'report-income', component: ReportComponent,
         children:
@@ -89,18 +66,5 @@ export const routes: Routes = [
     },
     // { path: 'statement', component: StatementComponent },
 
-    { path: 'company-list', component: CompanyListComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'setup', component: SetupComponent },
-    { path: 'forgot-password', component: ForgotPasswordComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'transaction', component: TransactionComponent },
-    { path: 'transfer/:id', component: TransferComponent },
-    { path: 'transaction-detail', component: TransactionDetailComponent },
-    { path: 'personalInfo', component: PersonalInfoComponent },
-    { path: 'companyInfo', component: CompanyInfoComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'contact-us', component: ContactUsComponent },
-    { path: 'pdf-view/:id', component: PdfviewPageComponent },
-    { path: 'address-list/:id', component: AddressComponent },
+    
 ];
