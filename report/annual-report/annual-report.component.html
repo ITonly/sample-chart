@@ -1,0 +1,55 @@
+<StackLayout orientation="vertical">
+	<StackLayout>
+		<StackLayout class="hr-light m-b-5 m-t-15"></StackLayout>
+		<GridLayout columns="*, *, *" rows="auto">
+			<DropDown row='0' col='1' #year class=" h3 vr-center text-center btn-small btn-secondary" [items]="periodCategory" [selectedIndex]="yearSelectedIndex"
+							(selectedIndexChange)="onChange(year.selectedIndex)">
+			</DropDown>
+		</GridLayout>
+		<StackLayout class="hr-light m-t-5 m-b-15"></StackLayout>
+	</StackLayout>
+	<GridLayout height="70%" columns="*,*,*,*" rows="auto,*">
+		<StackLayout class="stackLayout" orientation="vertical" row="0" col="0">
+			<Label class="fa icon icon-income text-center" text="{{ incomeIcon | fonticon}}" (tap)="changeIncomeStatus()"></Label>
+			<Label class="label h4 text-center" text="收入"></Label>
+		</StackLayout>
+		<StackLayout class="stackLayout" orientation="vertical" row="0" col="1">
+			<Label class="fa icon icon-expense text-center" text="{{ expenseIcon | fonticon}}" (tap)="changeExpenseStatus()"></Label>
+			<Label class="label h4 text-center" text="支出"></Label>
+		</StackLayout>
+		<StackLayout class="stackLayout" orientation="vertical" row="0" col="2">
+			<Label class="fa icon icon-balance text-center" text="{{ balanceIcon | fonticon}}" (tap)="changeBalanceStatus()"></Label>
+			<Label class="label h4 text-center" text="月收支差"></Label>
+		</StackLayout>
+		<StackLayout class="stackLayout" orientation="vertical" row="0" col="3">
+			<Label class="fa icon icon-totalbalance text-center" text="{{ totalbalanceIcon | fonticon}}" (tap)="changeTotalBalanceStatus()"></Label>
+			<Label class="label h4 text-center" text="总收支差"></Label>
+		</StackLayout>
+		<GridLayout class="m-t-10" row="1" col="0" colSpan="4" width="300">
+			<RadCartesianChart exampleTitle toggleNavButton>
+				<CategoricalAxis  tkCartesianHorizontalAxis   labelSize="14" lineThickness="3" lineColor="Grey"></CategoricalAxis>
+				<LinearAxis  tkCartesianVerticalAxis  ></LinearAxis>
+				<LineSeries tkCartesianSeries seriesName="tagName" [items]="categoricalSource" categoryProperty="month"
+								valueProperty="income"></LineSeries>
+				<Trackball  tkCartesianTrackball snapMode="AllClosestPoints" showIntersectionPoints="true"></Trackball>
+								
+				<LineSeries tkCartesianSeries seriesName="stagName" [items]="categoricalSource" categoryProperty="month" valueProperty="expense"></LineSeries>
+				<Trackball tkCartesianTrackball snapMode="AllClosestPoints" showIntersectionPoints="true"></Trackball>
+				
+				<LineSeries tkCartesianSeries seriesName="tagName" [items]="categoricalSource" categoryProperty="month" valueProperty="balance"></LineSeries>
+				<Trackball tkCartesianTrackball snapMode="AllClosestPoints" showIntersectionPoints="true"></Trackball>
+				
+				<LineSeries tkCartesianSeries seriesName="tagName" [items]="categoricalSource" categoryProperty="month" valueProperty="totalBalance"></LineSeries>
+				<Trackball tkCartesianTrackball snapMode="AllClosestPoints" showIntersectionPoints="true"></Trackball>
+				
+				<Palette tkCartesianPalette seriesName="tagName">
+					<PaletteEntry tkCartesianPaletteEntry strokeWidth="1" strokeColor="#92E7C4"></PaletteEntry>
+					<PaletteEntry tkCartesianPaletteEntry strokeWidth="1" strokeColor="#F478B7"></PaletteEntry>
+					<PaletteEntry tkCartesianPaletteEntry strokeWidth="1" strokeColor="#8278F3"></PaletteEntry>
+					<PaletteEntry tkCartesianPaletteEntry strokeWidth="1" strokeColor="#CA68FF"></PaletteEntry>
+				</Palette>
+			</RadCartesianChart>
+				
+		</GridLayout>
+	</GridLayout>
+</StackLayout>

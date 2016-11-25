@@ -1,0 +1,23 @@
+<StackLayout orientation="vertical">
+	<StackLayout class="input-field input-sides">
+		<StackLayout class="hr-light m-t-15 m-b-5"></StackLayout>
+		<GridLayout columns="*,90,*" rows="auto" class="filterSection">
+			<StackLayout row="0" col="1">
+				<gpm-datepicker-dialog class=" text-center btn-small btn-secondary" hint="选择日期" [(ngModel)]="todayDate" (onSelectedDateChange)="dateChange($event)"></gpm-datepicker-dialog>
+			</StackLayout>
+		</GridLayout>
+		<StackLayout class="hr-light m-t-5 m-b-15"></StackLayout>
+	</StackLayout>
+	<GridLayout height="60%" width="300">
+		<!-- >> chart-angular-bar-series -->
+		<RadCartesianChart exampleTitle toggleNavButton>
+			<CategoricalAxis labelSize="14" lineThickness="3" lineColor="Grey" tkCartesianVerticalAxis></CategoricalAxis>
+			<LinearAxis hidden="true" tkCartesianHorizontalAxis></LinearAxis>
+			<BarSeries tkCartesianSeries [items]="categoricalSource" categoryProperty="items" valueProperty="amount"></BarSeries>
+		</RadCartesianChart>
+		<!-- << chart-angular-bar-series -->
+	</GridLayout>
+	<StackLayout class="m-t-20 h5 daily-description">
+		<label text="（＊昨日结余＋本日收入－本日支出＝本日结余）"></label>
+	</StackLayout>
+</StackLayout>

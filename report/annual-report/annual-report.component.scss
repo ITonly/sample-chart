@@ -1,0 +1,58 @@
+.label{
+  color: #123456;
+  padding-top: 5;
+}
+.img {
+     padding-top: 10;
+    height:20;
+    width: 20;
+}
+.labelName{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.item {
+   color:#2ECFC8;
+    background-color: #fff;
+    width: auto;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    border-width: 1;
+    border-radius: 5;
+    border-color: #F6F6F6;
+    margin: 10 5 10 5;
+}
+.item-selected{
+  color:#fff;
+    background-color: #2ECFC8;
+    width: auto;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    border-width: 1;
+    border-radius: 5;
+    border-color: #F6F6F6;
+    margin: 10 5 10 5;
+}
+.icon{
+      font-size: 25;
+
+}
+.icon-income{
+  color:#92E7C4;
+}
+.icon-expense{
+  color:#F478B7;
+}
+.icon-balance{
+  color:#8278F3;
+}
+.icon-totalbalance{
+  color:#CA68FF;
+}
+.vr-center{
+  width: auto;
+    height: auto;
+  vertical-align: middle;
+}

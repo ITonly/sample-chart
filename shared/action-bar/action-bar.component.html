@@ -1,0 +1,12 @@
+<ActionBar class="action-bar">
+    <StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="center" (tap)="onActionTitleTap()">
+        <Label text="{{title}}" class="action-title"></Label>
+        <Label text="{{'fa-angle-down' | fonticon}}" class="fa" *ngIf="allowTitleClick"></Label>
+    </StackLayout>
+    <NavigationButton icon="{{navIcon}}" ios:visibility="collapse" (tap)="onNavBtnTap()"></NavigationButton>
+    <ActionItem ios.position="left" *ngIf="showBar" ios:visibility="visible" (tap)="onNavBtnTap()">
+        <StackLayout width="50" height="40">
+            <Label class="ion icon" text="{{navIconIos|fonticon}}"></Label>
+        </StackLayout>
+    </ActionItem>
+</ActionBar>

@@ -1,0 +1,12 @@
+<StackLayout class="dialog-background">
+    <DockLayout class="dialog">
+        <StackLayout orientation="horizontal" dock="bottom" stretchLastChild="true">
+            <Button text="确定" (tap)="okay()" class="dialogButton okay"></Button>
+            <Button text="取消" (tap)="close()" class="dialogButton close"></Button>
+        </StackLayout>
+        <StackLayout height="100%">
+            <Label [text]="dialogTitle" class="title"></Label>
+            <DatePicker #datePickerElement (loaded)="configure(datePickerElement)" class="datePicker"></DatePicker>
+        </StackLayout>
+    </DockLayout>
+</StackLayout>

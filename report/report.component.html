@@ -1,0 +1,40 @@
+<StackLayout orientation="vertical">
+	<!--<gpm-action-bar actionTitle="报表" showNav="true"></gpm-action-bar>-->
+	<gpm-action-bar actionTitle="报表" showNav="true" useCustomTap="true" (onNavTap)="onNavBtnTap()"></gpm-action-bar>
+	<!--	
+
+	<ActionBar class="action-bar">
+		<StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="center">
+			<Label text="报表" class="action-title"></Label>
+		</StackLayout>
+		<NavigationButton icon="{{navIcon}}" android:visibility="false" ios:visibility="false" (tap)="onNavBtnTap()"></NavigationButton>
+		<ActionItem ios.position="left" android.position="left" android:visibility="collapse" (tap)="onNavBtnTap()">
+			<Label class="fa  action-item-angle-main" [text]="'fa-angle-left' | fonticon"></Label>
+		</ActionItem>
+	</ActionBar>-->
+	<DockLayout class="from container accountType">
+		<GridLayout columns="*,*,*,*" rows="auto">
+			<GridLayout row="0" col="0" (tap)="onItemTap(dataItems.getItem(0))" [class]="dataItems.getItem(0).isSelected ? 'item-selected':' item'"
+							columns="*" rows="auto, auto">
+				<Label row='0' col='0' class="labelName font-name  fa fa-2x " text="{{ dataItems.getItem(0).icon | fonticon}}"></Label>
+				<Label row='1' col='0' class=" labelName font-icon" text="{{dataItems.getItem(0).name}}"></Label>
+			</GridLayout>
+			<GridLayout row="0" col="1" (tap)="onItemTap(dataItems.getItem(1))" [class]="dataItems.getItem(1).isSelected ? 'item-selected':' item'"
+							columns="*" rows="auto, auto">
+				<Label row='0' col='0' class="labelName font-name  fa fa-2x " text="{{ dataItems.getItem(1).icon | fonticon}}"></Label>
+				<Label row='1' col='0' class=" labelName font-icon" text="{{dataItems.getItem(1).name}}"></Label>
+			</GridLayout>
+			<GridLayout row="0" col="2" (tap)="onItemTap(dataItems.getItem(2))" [class]="dataItems.getItem(2).isSelected ? 'item-selected':' item'"
+							columns="*" rows="auto, auto">
+				<Label row='0' col='0' class="labelName font-name  fa fa-2x " text="{{ dataItems.getItem(2).icon | fonticon}}"></Label>
+				<Label row='1' col='0' class=" labelName font-icon" text="{{dataItems.getItem(2).name}}"></Label>
+			</GridLayout>
+			<GridLayout row="0" col="3" (tap)="onItemTap(dataItems.getItem(3))" [class]="dataItems.getItem(3).isSelected ? 'item-selected':' item'"
+							columns="*" rows="auto, auto">
+				<Label row='0' col='0' class="labelName font-name  fa fa-2x " text="{{ dataItems.getItem(3).icon | fonticon}}"></Label>
+				<Label row='1' col='0' class=" labelName font-icon" text="{{dataItems.getItem(3).name}}"></Label>
+			</GridLayout>
+		</GridLayout>
+	</DockLayout>
+	<page-router-outlet></page-router-outlet>
+</StackLayout>

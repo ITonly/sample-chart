@@ -1,0 +1,41 @@
+<StackLayout orientation="vertical" backgroundColor="#F2F2F2">
+	<StackLayout backgroundColor="#F2F2F2">
+		<StackLayout class="hr-light m-b-5"></StackLayout>
+		<GridLayout columns="*,90,30,90,*" rows="auto" class="filterSection">
+			<StackLayout row="0" col="1">
+				<gpm-datepicker-dialog class=" btn-small btn-secondary text-center" [(ngModel)]="startDate" (onSelectedDateChange)="startdateChange($event)"></gpm-datepicker-dialog>
+			</StackLayout>
+			<Label row="0" col="2" text="-" class="separator"></Label>
+			<StackLayout row="0" col="3">
+				<!--<gpm-datepicker-dialog row='0' col='3' class=" btn-small btn-secondary"  [(ngModel)]="endDate" (onSelectedDateChange)="enddateChange($event)"></gpm-datepicker-dialog>-->
+				<gpm-datepicker-dialog class="btn-small btn-secondary text-center" [(ngModel)]="endDate" (onSelectedDateChange)="enddateChange($event)"></gpm-datepicker-dialog>
+			</StackLayout>
+		</GridLayout>
+		<StackLayout class="hr-light m-t-5 m-b-5"></StackLayout>
+	</StackLayout>
+	<GridLayout height="40%" class="PieChart">
+		<RadPieChart allowAnimation="true" visibility="{{chartVisible}}" class="chart">
+			<DonutSeries tkPieSeries selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4" outerRadiusFactor="0.7" innerRadiusFactor="0.4"
+				[items]="pieSource" valueProperty="amount" legendLabel="category"></DonutSeries>
+		</RadPieChart>
+	</GridLayout>
+	<GridLayout height="40%" backgroundColor="#F2F2F2">
+		<RadListView id="listView" [items]="categoryList" selectionBehavior="None" class="list-group">
+			<template tkListItemTemplate let-item="item">
+				<StackLayout orientation="vertical" class="list-group-item">
+					<GridLayout columns="4,*,*,*,*,*,*,*" rows="auto">
+						<StackLayout row="0" col="0" class="vr-light text-left" backgroundColor="{{item.color}}"></StackLayout>
+						<Label row="0" col="1" colSpan="2" class="name h3 " text="{{item.name }}"></Label>
+						<Label row="0" col="3" colSpan="2" class="left h3" text="{{item.percent | percent:'.2-2'}}"></Label>
+						<Label row="0" col="5" colSpan="4" class="amountLabel h3" text="{{item.amount | number:'.2-2'}}"></Label>
+					</GridLayout>
+					<StackLayout class="hr-light m-t-10"></StackLayout>
+				</StackLayout>
+			</template>
+		</RadListView>
+	</GridLayout>
+	<GridLayout columns="*,*,*,*,*,*,*,*" rows="*" class="total">
+		<Label row="0" col="0" colSpan='2' class="left-total h3" text="总计"></Label>
+		<Label row="0" col="0" colSpan="10" class="numberLabel h2 " text="{{totalAmount| number:'.2-2'}}"></Label>
+	</GridLayout>
+</StackLayout>

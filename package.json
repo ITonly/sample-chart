@@ -1,0 +1,63 @@
+{
+  "description": "NativeScript GuanPlus Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript GuanPlus Application",
+  "repository": "<fill-your-repository-here>",
+  "scripts": {},
+  "nativescript": {
+    "id": "com.concordya.mobile.gp2",
+    "tns-ios": {
+      "version": "2.4.0"
+    },
+    "tns-android": {
+      "version": "2.4.1"
+    }
+  },
+  "android": {
+    "v8Flags": "--expose_gc"
+  },
+  "dependencies": {
+    "@angular/common": "2.2.0",
+    "@angular/compiler": "2.2.0",
+    "@angular/core": "2.2.0",
+    "@angular/forms": "2.2.0",
+    "@angular/http": "2.2.0",
+    "@angular/platform-browser": "2.2.0",
+    "@angular/platform-browser-dynamic": "2.2.0",
+    "@angular/router": "3.2.0",
+    "crypto-js": "3.1.8",
+    "lodash": "4.17.2",
+    "moment": "2.17.0",
+    "nativescript-angular": "1.1.3",
+    "nativescript-appversion": "1.3.2",
+    "nativescript-dom": "1.0.8",
+    "nativescript-drop-down": "1.4.0",
+    "nativescript-iqkeyboardmanager": "1.0.1",
+    "nativescript-loading-indicator": "2.2.1",
+    "nativescript-ng2-fonticon": "1.2.6",
+    "nativescript-slides": "file:package/nativescript-slides-2.2.1.tgz",
+    "nativescript-telerik-ui-pro": "file:package/nativescript-ui-pro.tgz",
+    "reflect-metadata": "~0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "tns-core-modules": "2.4.0"
+  },
+  "devDependencies": {
+    "@types/cryptojs": "3.1.29",
+    "@types/lodash": "4.14.39",
+    "babel-traverse": "6.19.0",
+    "babel-types": "6.19.0",
+    "babylon": "6.14.0",
+    "codelyzer": "1.0.0-beta.4",
+    "lazy": "1.0.11",
+    "nativescript-dev-sass": "0.4.1",
+    "nativescript-dev-typescript": "0.3.3",
+    "nativescript-dev-webpack": "0.0.20",
+    "node-sass": "3.13.0",
+    "raw-loader": "^0.5.1",
+    "tslint": "3.15.1",
+    "typescript": "2.0.10",
+    "uglify-js": "^2.7.4",
+    "webpack": "^1.13.3",
+    "zone.js": "~0.6.21"
+  }
+}

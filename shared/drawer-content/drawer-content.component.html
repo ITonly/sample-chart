@@ -1,0 +1,38 @@
+<StackLayout class="sidedrawer-left-image">
+	<GridLayout rows="auto" columns="auto,*" orientation="vertical" class="sidedrawer-header">
+		<StackLayout row="0" col="0" >
+
+			<Label rowSpan="2" class="fa font text-right" [text]="'fa-user-secret' | fonticon"></Label>
+		</StackLayout>
+		<StackLayout row="0" col="1" class="m-l-10">
+			<Label class="h3 text-left" [text]="currentUser.name"></Label>
+			<Label class="h3 p-t-10 text-left" [text]="currentCompany"></Label>
+		</StackLayout>
+	</GridLayout>
+	<StackLayout class="hr-blue " width="100%"></StackLayout>
+	<StackLayout class="sidedrawer-content">
+		<GridLayout class="sidedrawer-list-item" [nsRouterLink]="['/personalInfo']" rows="*" columns="*,auto"  pageTransition="slideLeft">
+			<Label row="0" col="0"  class="sidedrawer-list-item-text " text="个人信息"></Label>
+			<Label row="0" col="1"  class="fa sidedrawer-list-item-icon" [text]="'fa-angle-right' | fonticon"></Label>
+		</GridLayout>
+		<GridLayout class="sidedrawer-list-item" [nsRouterLink]="['/companyInfo']" rows="*" columns="*,auto"  pageTransition="slideLeft">
+			<Label row="0" col="0" class="sidedrawer-list-item-text" text="公司信息"></Label>
+			<Label row="0" col="1" class="fa sidedrawer-list-item-icon" [text]="'fa-angle-right' | fonticon"></Label>
+		</GridLayout>
+		<!--<GridLayout class="sidedrawer-list-item" rows="*" columns="*,auto">
+            <Label row="0" col="0" class="sidedrawer-left sidedrawer-list-item-text" text="修改PIN码"></Label>
+            <Label row="0" col="1" class="fa sidedrawer-list-item-icon" [text]="'fa-angle-right' | fonticon"></Label>
+        </GridLayout>-->
+		 <GridLayout class="sidedrawer-list-item" rows="*" columns="*,auto" [nsRouterLink]="['/contact-us']"  pageTransition="slideLeft">
+            <Label row="0" col="0" class=" sidedrawer-list-item-text" text="联系我们"></Label>
+            <Label row="0" col="1" class="fa sidedrawer-list-item-icon" [text]="'fa-angle-right' | fonticon"></Label>
+        </GridLayout> 
+		<GridLayout class="sidedrawer-list-item" [nsRouterLink]="['/about']" rows="*" columns="*,auto"  pageTransition="slideLeft">
+			<Label row="0" col="0" class=" sidedrawer-list-item-text" text="关于"></Label>
+			<Label row="0" col="1" class="fa sidedrawer-list-item-icon" [text]="'fa-angle-right' | fonticon"></Label>
+		</GridLayout>
+		<GridLayout row="auto" cloumns="*,auto" class="login-m">
+			<Button text="退出登录" class="h3 btn btn-danger" (tap)="logOut()"></Button>
+		</GridLayout>
+	</StackLayout>
+</StackLayout>
