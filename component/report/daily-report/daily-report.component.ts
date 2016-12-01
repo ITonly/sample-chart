@@ -24,6 +24,7 @@ export class DailyReportComponent extends BaseComponent implements OnInit {
     _categoricalSource: ObservableArray<TodayData>;
     dayDate = null;
     todayDate = null;
+    // stepValue:number = null;
 
     constructor(page: Page, loader: LoaderService, private chartApi: ChartApi) {
         super(page, loader);
@@ -69,9 +70,19 @@ export class DailyReportComponent extends BaseComponent implements OnInit {
                 console.log('data', JSON.stringify(data));
                 let temp: Array<TodayData> = [];
                 console.log('111', JSON.stringify(data));
+                // let tempData=[];
+                // for (let i = 0; i < 4; i++) {
+                //     tempData.push(data.series[i][0]);
+                // }
+                // let maxNum = Math.max(...tempData);
+                // let minNum = Math.min(...tempData);
+                // this.stepValue = (maxNum-minNum)/4;
+                // console.log( 'stepValue',this.stepValue);
+                // let maxNumber = Math.max(data.series)
                 for (let i = 0; i < 4; i++) {
                     temp.push({
-                        items: tempdata[i] + '\n' + data.series[i][0],
+                        // items: tempdata[i] + '\n' + data.series[i][0],
+                        items: tempdata[i],
                         amount: data.series[i][0]
                     });
 

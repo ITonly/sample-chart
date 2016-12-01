@@ -8,12 +8,15 @@
 		</GridLayout>
 		<StackLayout class="hr-light m-t-5 m-b-15"></StackLayout>
 	</StackLayout>
-	<GridLayout height="60%" width="300">
+	<GridLayout height="60%" width="80%">
 		<!-- >> chart-angular-bar-series -->
 		<RadCartesianChart exampleTitle toggleNavButton>
-			<CategoricalAxis labelSize="14" lineThickness="3" lineColor="Grey" tkCartesianVerticalAxis></CategoricalAxis>
-			<LinearAxis hidden="true" tkCartesianHorizontalAxis></LinearAxis>
-			<BarSeries tkCartesianSeries [items]="categoricalSource" categoryProperty="items" valueProperty="amount"></BarSeries>
+			<CategoricalAxis  labelSize="14" lineThickness="2" lineColor="Grey" tkCartesianVerticalAxis  ></CategoricalAxis>
+
+			<LinearAxis hidden="true" tkCartesianHorizontalAxis ></LinearAxis>
+			<BarSeries showLabels="true" tkCartesianSeries [items]="categoricalSource" categoryProperty="items" valueProperty="amount"></BarSeries>
+			<!--<PointLabelStyle tkBarLabelStyle margin="10" fontStyle="Bold" fillColor="#60B3FC" textSize="10" textColor="White"></PointLabelStyle>-->
+			
 		</RadCartesianChart>
 		<!-- << chart-angular-bar-series -->
 	</GridLayout>

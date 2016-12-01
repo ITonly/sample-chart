@@ -48,7 +48,7 @@ var DailyReportComponent = (function (_super) {
             console.log('111', JSON.stringify(data));
             for (var i = 0; i < 4; i++) {
                 temp.push({
-                    items: tempdata[i] + '\n' + data.series[i][0],
+                    items: tempdata[i],
                     amount: data.series[i][0]
                 });
             }
